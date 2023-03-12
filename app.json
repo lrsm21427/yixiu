@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/information/information",
+    "pages/me/me",
+    "pages/Shopping/Shopping"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#efefef",
+    "navigationBarBackgroundColor": "#4ca1fb",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true, 
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#515151",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./icon/tab_index.png",
+        "selectedIconPath": "./icon/tab_index_active.png"
+      },
+      {
+        "pagePath": "pages/information/information",
+        "text": "资讯",
+        "iconPath": "/icon/tab_information.png",
+        "selectedIconPath": "/icon/tab_information_active.png"
+      },
+      {
+        "pagePath": "pages/Shopping/Shopping",
+        "text": "购物车",
+        "iconPath": "./icon/tab_shopping.png",
+        "selectedIconPath": "./icon/tab_shopping_active.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "./icon/tab_wo.png",
+        "selectedIconPath": "./icon/tab_wo_active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

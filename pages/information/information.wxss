@@ -1,0 +1,60 @@
+/* pages/information/information.wxss */
+
+.top {
+  width: 550rpx;
+  height: 20rpx;
+  background-color: skyblue;
+  margin-left: 100rpx;
+  border-radius: 0 0 20rpx 20rpx;
+}
+
+.search {
+  width: 650rpx;
+  height: 80rpx;
+  background-color: rgb(247 247 247 / 65%);
+  border-radius: 30rpx;
+  margin-top: 40rpx;
+  margin-left: 50rpx;
+  display: flex;
+}
+
+.search image {
+  height: 50rpx;
+  width: 50rpx;
+  padding: 15rpx;
+}
+
+.search input {
+  margin-top: 15rpx;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-icon {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-icon image{
+  width: 100rpx;
+  height: 100rpx; 
+  padding: 20rpx;
+}
+
+.user-information {
+  padding: 20rpx;
+}
+
+.user-time {
+  color: darkgray;
+}
+
+.information-image {
+  width: 650rpx;
+  margin-left: 50rpx;
+  /* border: 1rpx solid red;  */
+  border-radius: 60rpx;
+}

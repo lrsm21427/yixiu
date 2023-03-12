@@ -1,0 +1,24 @@
+<!--pages/information/information.wxml-->
+<swiper indicator-dots circular autoplay="true" interval="3000">
+  <swiper-item>
+  <image src="/icon/搜索.png"></image></swiper-item>
+  <swiper-item>
+  <image src="/icon/点赞.png"></image></swiper-item>
+  <swiper-item>
+  <image src="/icon/转发.png"></image></swiper-item>
+</swiper>
+<view class="top"></view>
+<view class="search">
+    <image src="/icon/搜索.png"></image>
+    <input bindinput="userNameInputAction"  class="input" name="userName" placeholder="请输入搜索内容" auto-focus="true" />
+</view>
+<view class="information">
+  <view class="user-icon">
+    <image src="/icon/tab_wo.png"></image>
+    <view class="user-information">
+      <view class="user-name">name</view>
+      <view class="user-time">time</view>
+    </view>
+  </view>
+  <image class="information-image" src="/icon/浏览.png"></image>
+</view>

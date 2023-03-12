@@ -1,0 +1,107 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.top-view {
+  width: 550rpx;
+  height: 20rpx;
+  background-color: skyblue;
+  margin-top: -30rpx;
+  margin-left: 100rpx;
+  border-radius: 0 0 20rpx 20rpx;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+swiper{
+  padding: 20rpx 20rpx;
+  background-color: #f7f4f4;
+}
+
+swiper-item image {
+  width: 100%;
+}
+
+.searchOuterView{
+  padding:15rpx;
+
+}
+.searchInnerView{
+  margin-top: -40%;
+  display: flex;
+  width: 720rpx;
+  height:58rpx;
+  background-color: rgb(247 247 247 / 65%);
+  border-radius: 20rpx;
+  line-height: 52rpx;
+  box-sizing: border-box;
+}
+.searchInnerView image{
+  padding:10rpx;
+  width:36rpx;
+  height:36rpx;
+  vertical-align: middle;
+}
+
+.searchInnerView input {
+  margin-top: 5rpx;
+  width: 300rpx;
+}
+
+
+.top {
+  display:flex;
+  height: 100%;
+  flex-direction: column;
+  background-color: #f7f4f4;
+}
+
+.top-image {
+  width: 100%;
+  /* border: 1rpx solid #000; */
+  border-radius:0 0 10% 10%;
+}
+
+.commodity {
+  background-color: #f7f4f4;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.commodity-item {
+  width: 340rpx;
+  height: 380rpx;
+  border: 1rpx solid rgb(235, 235, 235);
+  background-color: white;
+  border-radius: 10%;
+  margin: 10rpx;
+}
+
+.commodity-item image {
+  width: 340rpx;
+  height: 320rpx;
+}
+
+.commodity-item-title {
+  margin-top: -20rpx;
+  padding: 20rpx;
+}
+
+.scroll {
+  height: 90%;
+}

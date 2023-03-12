@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="top">
+  <image class="top-image" src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500"></image>
+  <view class="searchOuterView">
+  <view class="searchInnerView">
+        <image src="/icon/搜索.png"></image>
+        <input bindinput="userNameInputAction"  class="input" name="userName" placeholder="请输入搜索内容" auto-focus="true" />
+  </view>
+  </view>
+</view>
+<view style="background-color:#f7f4f4 ;">
+  <view class="top-view"></view>
+</view>
+<swiper indicator-dots circular autoplay="true" interval="3000">
+  <swiper-item> <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500"></image></swiper-item>
+  <swiper-item><image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500"></image></swiper-item>
+  <swiper-item><image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500"></image></swiper-item>
+</swiper>
+<view class="commodity">
+  <view class="commodity-item">
+    <image src="/icon/good.png"></image>
+    <view class="commodity-item-title">title</view>
+  </view>
+  <view class="commodity-item"></view>
+  <view class="commodity-item"></view>
+  <view class="commodity-item"></view>
+</view>

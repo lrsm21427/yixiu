@@ -1,0 +1,66 @@
+<!--pages/me/me.wxml-->
+<view class="user-info" >  
+  <view class="top-container">
+    <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500"></image>
+    <view class="user-icon">
+      <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500"></image>
+      <view class="user-name">{{username}}</view>
+      <view class="user-visitor">
+        <text class="user-visitor-item">今日访客: {{visitor}}</text>
+        <text class="user-visitor-item">访客总数: {{sumvisitor}}</text>
+      </view>
+    </view>
+    <view class="user-introduction">{{userintroduction}}</view>
+  </view>
+  <view class="user-status">
+    <view class="user-status-items">
+      <navigator class="user-status-item" url="/pages/Shopping/Shopping" open-type="switchTab"><image src="/icon/购物车.png"></image><text>购物车</text></navigator>
+      <navigator class="user-status-item"><image src="/icon/订单.png"></image><text>订单</text></navigator>
+      <navigator class="user-status-item"><image src="/icon/订单.png"></image><text>tip</text></navigator>
+      <navigator class="user-status-item"><image src="/icon/订单.png"></image><text>tip</text></navigator>
+    </view>
+  </view>
+  <view class="user-tc">
+    <view class="user-trends">
+      <view class="user-trend" bindtap="Selecttrend" style="color: {{trendcolor}};border-bottom: 2rpx solid {{trendbcolor}};">我的动态</view>
+      <view class="user-collect" bindtap="Selectcutcollect" style="color: {{collectcolor}};border-bottom: 2rpx solid {{collectbcolor}};">我的收藏</view>
+    </view>
+    <view wx:if="{{trend == true}}">
+      <view class="user-trend-item">
+        <view class="trend-information">
+          <image src="/icon/tab_wo_active.png" class="trend-user-icon"></image>
+          <view class="trend-information-name">
+            <text class="trend-name">name</text>
+            <text class="trend-time">time</text>
+          </view>
+        </view>
+        <view class="trend-text">123</view>
+        <image class="trend-image" src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500">
+        </image>
+        <view class="trend-notes">
+          <view class="trend-over">
+            <image src="/icon/浏览.png"></image>
+           <text>324</text>
+          </view>
+          <view class="trend-discuss">
+            <image src="/icon/评论.png"></image>
+            <text>14</text>
+          </view>
+          <view class="trend-retransmission">
+            <image src="/icon/转发.png"></image>
+            <text>5</text>
+          </view>
+        <view class="trend-support">
+          <image src="/icon/点赞.png"></image>
+          <text>80</text>
+        </view>
+      </view>
+      </view>
+    </view>
+    <view wx:if="{{collect == true}}">
+      <view class="user-collect-item">123</view>
+    </view>
+    
+  </view>
+  
+</view>
