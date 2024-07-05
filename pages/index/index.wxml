@@ -1,27 +1,42 @@
 <!--index.wxml-->
 <view class="top">
-  <image class="top-image" src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500"></image>
+  <view class="top-1"></view>
   <view class="searchOuterView">
-  <view class="searchInnerView">
-        <image src="/icon/搜索.png"></image>
-        <input bindinput="userNameInputAction"  class="input" name="userName" placeholder="请输入搜索内容" auto-focus="true" />
-  </view>
+    <view class="searchInnerView">
+          <image src="/icon/搜索.png"></image>
+          <input bindinput="userNameInputAction"  class="input" name="userName" placeholder="请输入搜索内容" auto-focus="true" />
+    </view>
   </view>
 </view>
 <view style="background-color:#f7f4f4 ;">
   <view class="top-view"></view>
 </view>
+
+<view class="select-item">
+  <view class='select_box'>
+ <view class='select' catchtap='selectTap'>
+  <text class='select_text'>{{selectData[index]}}</text>
+  <image class='select_img {{show&&"select_img_rotate"}}' src='/icon/上箭头.png'></image>   
+ </view>
+ <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+  <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+ </view>
+</view>
+</view>
+
 <swiper indicator-dots circular autoplay="true" interval="3000">
-  <swiper-item> <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500"></image></swiper-item>
-  <swiper-item><image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500"></image></swiper-item>
-  <swiper-item><image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500"></image></swiper-item>
+  <swiper-item> <image src="http://sdw43wqdt.hb-bkt.clouddn.com/%E5%8C%85%E8%A3%851.png"></image></swiper-item>
+  <swiper-item> <image  src="http://sdw43wqdt.hb-bkt.clouddn.com/%E5%8C%85%E8%A3%852.png"></image></swiper-item>
+  <swiper-item> <image src="http://sdw43wqdt.hb-bkt.clouddn.com/%E7%8C%AB%E5%8C%85%E5%8C%85.png"></image></swiper-item>
 </swiper>
-<view class="commodity">
-  <view class="commodity-item">
-    <image src="/icon/good.png"></image>
-    <view class="commodity-item-title">title</view>
-  </view>
-  <view class="commodity-item"></view>
-  <view class="commodity-item"></view>
-  <view class="commodity-item"></view>
+<view class="commodity" >
+  <!-- <navigator url="/pages/object/object"> -->
+    <view class="commodity-item" wx:for="{{goodurl}}" wx:key="index">
+      <navigator url="/pages/object/object?goodsId={{index}}">
+        <image mode="aspectFill" src="{{goodurl[index].url}}" ></image>
+        <view class="commodity-item-price">{{goodurl[index].price}}</view>
+        <view class="commodity-item-title">{{goodurl[index].name}}</view>
+      </navigator>
+    </view>
+  <!-- </navigator> -->
 </view>

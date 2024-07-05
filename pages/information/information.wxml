@@ -1,24 +1,24 @@
 <!--pages/information/information.wxml-->
-<swiper indicator-dots circular autoplay="true" interval="3000">
+<swiper class="swiper" indicator-dots circular autoplay="true" interval="3000">
   <swiper-item>
-  <image src="/icon/搜索.png"></image></swiper-item>
+  <image mode="heightFix" src="http://sdw43wqdt.hb-bkt.clouddn.com/%E5%B0%8F%E5%BD%9D%E5%AE%B3%E7%BE%9E.jpg"></image></swiper-item>
   <swiper-item>
-  <image src="/icon/点赞.png"></image></swiper-item>
+  <image mode="heightFix" src="http://sdw43wqdt.hb-bkt.clouddn.com/%E5%B0%8F%E5%BD%9D%E6%85%8C%E5%BC%A0.jpg"></image></swiper-item>
   <swiper-item>
-  <image src="/icon/转发.png"></image></swiper-item>
+  <image mode="heightFix" src="http://sdw43wqdt.hb-bkt.clouddn.com/%E5%B0%8F%E5%BD%9D%E5%93%AD%E5%93%AD.jpg"></image></swiper-item>
 </swiper>
 <view class="top"></view>
 <view class="search">
     <image src="/icon/搜索.png"></image>
-    <input bindinput="userNameInputAction"  class="input" name="userName" placeholder="请输入搜索内容" auto-focus="true" />
+    <input bindinput="userNameInputAction"  class="input" name="userName" placeholder="请输入搜索内容" auto-focus="true" bindinput="onInput" bindconfirm="onSearch"/>
 </view>
 <view class="information">
-  <view class="user-icon">
-    <image src="/icon/tab_wo.png"></image>
-    <view class="user-information">
-      <view class="user-name">name</view>
-      <view class="user-time">time</view>
-    </view>
+  <navigator class="chat-button" url="/pages/ai/ai">对话小彝</navigator>
+  <!-- <view class="user-icon">
+    <image mode="widthFix" src="/icon/user_icon.png"></image>
+  </view> -->
+  <view class="information-images">
+    <image mode="widthFix" class="information-image" src="http://sdw43wqdt.hb-bkt.clouddn.com/%E5%B0%8F%E5%BD%9D%E8%A1%A8%E6%83%85.jpg">
+  </image>
   </view>
-  <image class="information-image" src="/icon/浏览.png"></image>
 </view>

@@ -5,6 +5,18 @@
   /* border: 1rpx solid #000; */
 }
 
+.top-view1 {
+  height: 300rpx;
+  background-color: rgb(34, 65, 241);
+}
+
+.top-view2 {
+  background-color: #f7f4f4;
+  margin-top: -100rpx;
+  height: 100rpx;
+  border-radius: 90rpx 90rpx 0 0;
+}
+
 .user-icon {
   display: flex;
   width: 730rpx;
@@ -43,11 +55,20 @@
   /* justify-content: center; */
 }
 
+.logbt {
+  margin-left: 10rpx;
+  margin-top: -50rpx;
+  width: 410rpx;
+  height: 80rpx;
+}
+
 .user-visitor{
+  color: rgb(170, 170, 170);
   width: 150rpx;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  margin-top: -70rpx;
 }
 
 .user-visitor-item {
@@ -161,16 +182,18 @@
 }
 
 .trend-time {
+  font-size: 20rpx;
   color:#d8d6d6;
 }
 
 .trend-text {
-  margin-left: 80rpx;
+  font-size: 25rpx;
+  margin-left: 70rpx;
+  margin-bottom: 10rpx;
 }
 
 .trend-image {
-  height: 300rpx;
-  margin-left: 50rpx;
+  width: 50%;
 }
 
 .trend-notes {

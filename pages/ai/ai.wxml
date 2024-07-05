@@ -1,0 +1,17 @@
+<view class="chat-container">
+  <view class="video-container">
+    <image wx:if="{{!videoPlaying}}" src="/video/小彝.jpg" mode="aspectFit"></image>
+    <video wx:if="{{videoPlaying}}" src="{{newVideoSrc}}" controls autoplay style="object-fit: cover;" bindended="onVideoEnded" controls="{{videoControls}}"></video>
+  </view>
+  <view class="chat-messages">
+    <block wx:for="{{messages}}" wx:key="index">
+      <view class="message" data-role="{{item.role}}">
+        <text>{{item.content}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="chat-input">
+    <input type="text" placeholder="请输入消息..." bindinput="onInput" value="{{inputValue}}" />
+    <button bindtap="sendMessage">发送</button>
+  </view>
+</view>

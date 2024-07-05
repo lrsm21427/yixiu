@@ -1,0 +1,56 @@
+<!--pages/learn/learn.wxml-->
+<view class="main">
+  <view class="top-view">
+    <view class="top-view-1">
+      <image class="top-image" src="http://sdw43wqdt.hb-bkt.clouddn.com/big.jpg"></image>
+    </view>
+    <view class="top-view-2"></view>
+  </view>
+  <view class="tab-container">
+  <view class="tab-item {{activeTab === 'all' ? 'active' : ''}}" data-name="all" bindtap="changeTab">全部</view>
+  <view class="tab-item {{activeTab === 'courses' ? 'active' : ''}}" data-name="courses" bindtap="changeTab">学习课程</view>
+  <view class="tab-item {{activeTab === 'history' ? 'active' : ''}}" data-name="history" bindtap="changeTab">浏览记录</view>
+</view>
+<view class="class" wx:if="{{tip1_bool == true}}">
+  <navigator class="naviga" url="/pages/classvideo/classvideo?category=0">
+    <view class="class-1">
+      <image src="http://sdw43wqdt.hb-bkt.clouddn.com/%E5%B0%8F%E5%BD%9D.png"></image>
+      <view class="class-text1">技法教学区</view>
+    </view>
+  </navigator>
+  <navigator class="naviga" url="/pages/classvideo/classvideo?category=1">
+    <view class="class-2">
+      <image src="http://sdw43wqdt.hb-bkt.clouddn.com/%E5%B0%8F%E5%BD%9D.png"></image>
+      <view class="class-text2">理论指导区</view>
+    </view>
+  </navigator>
+</view>
+<view wx:if="{{tip1_bool == true}}">
+  <picker mode="selector" range="{{options}}" bindchange="onPickerChange" value="{{2}}">
+    <view class="picker-btn">
+      <view class="picker-text">{{selectedOption}}</view>
+      <view class="arrow"></view>
+    </view>
+  </picker>
+  <view style="font-size: 20rpx;margin-left: 30rpx;">筛选</view>
+</view>
+<view class="mainview" wx:if="{{tip1_bool == true}}" wx:for="{{text}}" wx:key="index">
+  <view class="mainview_item">
+    <navigator url="/pages/classview/classview?goodsId={{index}}"><image src="http://sdw43wqdt.hb-bkt.clouddn.com/%E5%BD%9D%E7%BB%A3%E5%9B%BE%E6%A1%881.png"> </image></navigator>
+    <view class="mainview_text">
+      <view class="mainview_text_1">{{text[index].ttip}}</view>
+      <view class="mainview_text_2">...</view>
+    </view>
+  </view>
+</view>
+<view class="mainview" wx:if="{{tip2_bool == true}}">
+  <view class="mainview_text_2">
+    暂无课程
+  </view>
+</view>
+<view class="mainview" wx:if="{{tip3_bool == true}}">
+  <view class="mainview_text_2">
+    暂无记录
+  </view>
+</view>
+</view>

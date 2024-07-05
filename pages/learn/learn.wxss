@@ -1,0 +1,176 @@
+/* pages/learn/learn.wxss */
+.top-view-1 {
+  width: 750rpx;
+}
+
+.top-image {
+  height: 30vh;
+}
+
+.top-view-2 {
+  height: 60rpx;
+  width: 600rpx;
+  margin-left: 75rpx;
+  margin-top: -30rpx;
+  background-color: cornflowerblue;
+}
+
+.tab-item.active {
+  
+  color: #ffffff; /* 设置选中时的文字颜色 */
+  background-color: #308aff; /* 设置选中时的背景颜色 */
+}
+
+
+.tab-container {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+}
+
+.tab-item {
+  width: 150rpx;
+  height: 30rpx;
+  border-radius: 30rpx;
+  /* flex: 1; */
+  background-color: #ebeaea;
+  text-align: center;
+  padding: 5px;
+  margin-left: 20rpx;
+  font-size: 12px;
+}
+
+
+.top {
+  display:flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.class {
+ width: 100%;
+ height: 230rpx;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ margin-top: 20rpx;
+}
+
+.class-1 {
+  display: flex;
+  width: 100%;
+  height: 190rpx;
+  background-color: rgb(171, 228, 245);
+  border-radius: 40rpx;
+}
+
+.naviga {
+  border-radius: 40rpx;
+
+}
+
+.class-2 {
+  display: flex;
+  width: 100%;
+  height: 190rpx;
+  background-color: rgb(246, 203, 250);
+  border-radius: 40rpx;
+}
+
+.class-1 image{
+  width: 120rpx;
+  height: 150rpx;
+  margin-top: 40rpx;
+}
+
+.class-2 image{
+  width: 120rpx;
+  height: 150rpx;
+  margin-top: 40rpx;
+}
+
+.picker-btn {
+  margin-top: -2rpx;
+  margin-left: 10rpx;
+  width: 150rpx;
+  height: 15rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #f7f4f4; */
+  padding: 10px;
+  border-radius: 5px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-top: 6px solid #999;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
+.picker-text {
+  font-size: 30rpx;
+}
+
+.class-text1 {
+  width: 218rpx;
+  background-color: #f5f5f5;
+  height: 60rpx;
+  margin-top: 100rpx;
+  border-radius: 20rpx 0 0 20rpx;
+  color: rgb(70, 134, 253);
+  text-align: center;
+
+}
+
+.class-text2 {
+  width: 218rpx;
+  background-color: #f5f5f5;
+  height: 60rpx;
+  margin-top: 100rpx;
+  border-radius: 20rpx 0 0 20rpx;
+  color: rgb(221, 67, 195);
+  text-align: center;
+}
+
+.mainview {
+  width: 90%;
+  /* border: black solid 1rpx; */
+  margin-left: 5%;
+}
+
+.mainview_item {
+  display: flex;
+  height: 320rpx;
+  margin-top: 40rpx;
+  /* margin-bottom: 20rpx; */
+  /* border: black solid 1rpx; */
+  background-color: #b6c4ee;
+  border-radius: 40rpx;
+}
+
+.mainview_item image{
+  height: 240rpx;
+  width: 240rpx;
+  margin: 40rpx;
+  border-radius: 40rpx;
+}
+
+.mainview_text {
+  height: 240rpx;
+  margin-top: 40rpx;    
+}
+
+.mainview_text_1 {
+  margin-top: 20rpx;
+}
+
+.mainview_text_2 {
+  margin-top: 40rpx;
+  color: #999;
+}

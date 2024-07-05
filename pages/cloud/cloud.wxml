@@ -1,0 +1,52 @@
+<!--pages/cloud/cloud.wxml-->
+<view class="main">
+<view class="top">
+  <image class="top-image" src="http://sdw43wqdt.hb-bkt.clouddn.com/big.jpg"></image>
+  <view class="searchOuterView">
+  <view class="searchInnerView">
+        <image src="/icon/搜索.png"></image>
+        <input bindinput="userNameInputAction"  class="input" name="userName" placeholder="请输入搜索内容" auto-focus="true" bindinput="onInput" bindconfirm="onSearch"/>
+  </view>
+  </view>
+</view>
+<view class="text">
+  <view class="view-texts">
+    <view class="view-text">小彝云云：彝绣多用丝线、棉线、开丝毛线、仿金属丝、丝带等,一般为黑色为底，搭配红、黄、绿、蓝等纯度极高的花线</view>
+  </view>
+  <view class="circle">
+    <view class="plus"></view>
+  </view>
+</view>
+<view class="tab-container">
+  <view class="tab-item {{activeTab === 'discover' ? 'active' : ''}}" data-name="discover" bindtap="changeTab">发现</view>
+  <view class="tab-item {{activeTab === 'courses' ? 'active' : ''}}" data-name="courses" bindtap="changeTab">学习课程</view>
+  <view class="tab-item {{activeTab === 'history' ? 'active' : ''}}" data-name="history" bindtap="changeTab">浏览记录</view>
+  <picker mode="selector" range="{{options}}" bindchange="onPickerChange">
+    <view class="picker-btn">
+      <view class="picker-text">{{selectedOption}}</view>
+      <view class="arrow"></view>
+    </view>
+  </picker>
+</view >
+  <view wx:if="{{tip1_bool == true}}">
+    <view  class="view" style="display: flex; flex-wrap: wrap;" >
+    <view class="view-image" wx:for="{{imageurl}}" wx:key="index">
+      <navigator url="/pages/cloudview/cloudview?goodsId={{index}}">
+      <image src="{{imageurl[index].url}}">
+      
+      </image>
+      </navigator>
+    </view>
+  </view>
+  </view>
+  <view  wx:if="{{tip2_bool == true}}">
+    <view class="view" >
+      暂无课程
+    </view>
+  </view>
+  <view  wx:if="{{tip3_bool == true}}">
+    <view class="view" >
+      暂无记录
+    </view>
+</view> 
+</view>

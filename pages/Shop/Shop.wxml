@@ -1,0 +1,21 @@
+<!-- cart.wxml -->
+<view class="container">
+  <view class="header">购物车</view>
+  <view class="cart-items">
+    <block wx:for="{{cartItems}}" wx:key="index">
+      <view class="cart-item">
+        <image class="item-image" src="{{item.image}}"></image>
+        <view class="item-details">
+          <view class="item-name">{{item.name}}</view>
+          <view class="item-price">价格：{{item.price}}元</view>
+          <view class="item-quantity">
+            <button class="quantity-btn" bindtap="decreaseQuantity" data-index="{{index}}">-</button>
+            <text class="quantity-text">{{item.quantity}}</text>
+            <button class="quantity-btn" bindtap="increaseQuantity" data-index="{{index}}">+</button>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="total-price">总价：{{totalPrice}}元</view>
+</view>

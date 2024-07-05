@@ -1,16 +1,25 @@
 {
   "pages": [
+    "pages/cloud/cloud",
     "pages/index/index",
     "pages/information/information",
     "pages/me/me",
-    "pages/Shopping/Shopping"
+    "pages/Shopping/Shopping",
+    "pages/learn/learn",
+    "pages/object/object",
+    "pages/classview/classview",
+    "pages/cloudview/cloudview",
+    "pages/classvideo/classvideo",
+    "pages/Shop/Shop",
+    "pages/searchpage/searchpage",
+    "pages/ai/ai"
   ],
   "window": {
     "backgroundTextStyle": "dark",
     "backgroundColor": "#efefef",
     "navigationBarBackgroundColor": "#4ca1fb",
     "navigationBarTextStyle": "black",
-    "enablePullDownRefresh": true, 
+    "enablePullDownRefresh": true,
     "onReachBottomDistance": 50
   },
   "tabBar": {
@@ -20,26 +29,32 @@
     "borderStyle": "black",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "./icon/tab_index.png",
-        "selectedIconPath": "./icon/tab_index_active.png"
+        "pagePath": "pages/cloud/cloud",
+        "text": "彝绣云云",
+        "iconPath": "./icon/cloud.png",
+        "selectedIconPath": "./icon/cloud_active.png"
       },
       {
         "pagePath": "pages/information/information",
-        "text": "资讯",
+        "text": "彝绣论道",
         "iconPath": "/icon/tab_information.png",
         "selectedIconPath": "/icon/tab_information_active.png"
       },
       {
-        "pagePath": "pages/Shopping/Shopping",
-        "text": "购物车",
-        "iconPath": "./icon/tab_shopping.png",
-        "selectedIconPath": "./icon/tab_shopping_active.png"
+        "pagePath": "pages/index/index",
+        "text": "彝绣商城",
+        "iconPath": "./icon/tab_index.png",
+        "selectedIconPath": "./icon/tab_index_active.png"
+      },
+      {
+        "pagePath": "pages/learn/learn",
+        "text": "彝绣学堂",
+        "iconPath": "./icon/learn.png",
+        "selectedIconPath": "./icon/learn_active.png"
       },
       {
         "pagePath": "pages/me/me",
-        "text": "我的",
+        "text": "彝绣与我",
         "iconPath": "./icon/tab_wo.png",
         "selectedIconPath": "./icon/tab_wo_active.png"
       }

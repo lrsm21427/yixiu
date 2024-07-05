@@ -1,0 +1,108 @@
+/* pages/object/object.wxss */
+image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.mainview {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: #f8f8f8;
+  height: 70vh;
+}
+
+.object-price {
+  margin-top: 40rpx;
+  height: 100rpx;
+  width: 90%;
+  color: #fff;
+  border-radius: 20rpx;
+  /* border: solid 1rpx red;  */
+  background-color: rgb(252, 44, 44);
+}
+
+.object-price-text{
+  margin-top: 10rpx;
+  font-size: large;
+  margin-left: 20rpx;
+}
+
+.object-name{
+  width: 90%;
+  background-color: rgb(255, 255, 255);
+  height: 150rpx;
+  margin: -30rpx 0;
+  /* border: solid 1rpx red;  */
+  border-radius: 20rpx;
+  /* border: solid 1rpx red;  */
+}
+
+.object-name-text {
+  margin-top: 40rpx;
+  margin-left: 20rpx;
+  font-size: 40rpx;
+}
+
+.object-information {
+  background-color: rgb(255, 255, 255);
+  margin-top: 50rpx;
+  width: 90%;
+  height: 400rpx;
+  border-radius: 20rpx;
+}
+
+.fixed {
+  background-color: #ffffff;
+  height: 102rpx;
+  border-radius: 28rpx 28rpx 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fixed-1 {
+  width: 60%;
+ /* border: red solid 1rpx; */
+}
+
+.fixed-2 {
+  display: flex ;
+  width: 40%;
+  /* border: red solid 1rpx; */
+  justify-content: space-around;
+}
+
+.fixed-2-shop1 {
+  background-color: rgb(245, 227, 71);
+  margin-top: 20rpx;
+  width: 40%;
+  color: #f8f8f8;
+  height: 55rpx;
+  /* border: red solid 1rpx; */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20rpx;
+}
+
+.fixed-2-shop2 {
+  background-color: rgb(241, 100, 100);
+  margin-top: 20rpx;
+  width: 40%;
+  color: #f8f8f8;
+  height: 55rpx;
+  /* border: red solid 1rpx; */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20rpx;
+}
+
+.centered-text1 {
+  font-size: 20rpx;
+}
+
+.centered-text2 {
+  font-size: 25rpx;
+}

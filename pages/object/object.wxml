@@ -1,0 +1,42 @@
+<!--pages/object/object.wxml-->
+<image mode="aspectFill" src="{{goodurl[cloudID].url}}" ></image>
+<view class="mainview">
+  <view class="object-price">
+    <view class="object-price-text">
+      {{goodurl[cloudID].price}}
+    </view>
+  </view>
+  <view class="object-name"> 
+    <view class="object-name-text">
+      {{goodurl[cloudID].name}}
+    </view>
+  </view>
+  <view class="object-information"> 
+    <view>
+      {{goodurl[cloudID].information}}
+    </view>
+  </view>
+  <view class="fixed" style="position:fixed;bottom:0;width:750rpx;">
+    <view class="fixed-1">
+      <view>
+        
+      </view>
+      <view>
+        
+      </view>
+      <view>
+        
+      </view>
+    </view>
+    <view class="fixed-2">
+      <view class="fixed-2-shop1" bindtap="orderCar">
+        <text class="centered-text1">加入购物车</text>
+        <!-- <image src="/icon/pay.png"></image> -->
+      </view>
+      <view class="fixed-2-shop2" bindtap="orderShoP">
+        <text class="centered-text2">立即付款</text>
+        <!-- <image src="/icon/pay.png"></image> -->
+      </view>
+    </view>
+  </view>
+</view>

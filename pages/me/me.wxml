@@ -1,11 +1,15 @@
 <!--pages/me/me.wxml-->
 <view class="user-info" >  
   <view class="top-container">
-    <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500"></image>
+    <view>
+      <view class="top-view1"></view>
+      <view class="top-view2"></view>
+    </view>
     <view class="user-icon">
-      <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500"></image>
-      <view class="user-name">{{username}}</view>
-      <view class="user-visitor">
+      <image src="{{icon_url}}"></image>
+      <view wx:if="{{username_bool == true}}" class="user-name">{{username}}</view>
+      <button wx:if="{{bt_bool == true}}" bindtap="login" class="logbt" >登录</button>
+      <view wx:if="{{username_bool == true}}" class="user-visitor">
         <text class="user-visitor-item">今日访客: {{visitor}}</text>
         <text class="user-visitor-item">访客总数: {{sumvisitor}}</text>
       </view>
@@ -14,10 +18,10 @@
   </view>
   <view class="user-status">
     <view class="user-status-items">
-      <navigator class="user-status-item" url="/pages/Shopping/Shopping" open-type="switchTab"><image src="/icon/购物车.png"></image><text>购物车</text></navigator>
+      <navigator class="user-status-item" url="/pages/Shopping/Shopping" ><image src="/icon/购物车.png"></image><text>购物车</text></navigator>
       <navigator class="user-status-item"><image src="/icon/订单.png"></image><text>订单</text></navigator>
-      <navigator class="user-status-item"><image src="/icon/订单.png"></image><text>tip</text></navigator>
-      <navigator class="user-status-item"><image src="/icon/订单.png"></image><text>tip</text></navigator>
+      <navigator class="user-status-item"><image src="/icon/退货.png"></image><text>售后</text></navigator>
+      <navigator class="user-status-item"><image src="/icon/评价.png"></image><text>评价</text></navigator>
     </view>
   </view>
   <view class="user-tc">
@@ -28,19 +32,19 @@
     <view wx:if="{{trend == true}}">
       <view class="user-trend-item">
         <view class="trend-information">
-          <image src="/icon/tab_wo_active.png" class="trend-user-icon"></image>
+          <image src="/icon/user_icon.png" class="trend-user-icon"></image>
           <view class="trend-information-name">
-            <text class="trend-name">name</text>
-            <text class="trend-time">time</text>
+            <text class="trend-name">小彝</text>
+            <text class="trend-time">十小时前</text>
           </view>
         </view>
-        <view class="trend-text">123</view>
-        <image class="trend-image" src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500">
+        <view class="trend-text">   这款棉花娃娃的表情实在是太可爱啦。</view>
+        <image mode="widthFix" class="trend-image" src="http://sdw43wqdt.hb-bkt.clouddn.com/%E5%B0%8F%E5%BD%9D%E5%BC%80%E5%BF%83.png">
         </image>
         <view class="trend-notes">
           <view class="trend-over">
             <image src="/icon/浏览.png"></image>
-           <text>324</text>
+            <text>324</text>
           </view>
           <view class="trend-discuss">
             <image src="/icon/评论.png"></image>
@@ -58,7 +62,7 @@
       </view>
     </view>
     <view wx:if="{{collect == true}}">
-      <view class="user-collect-item">123</view>
+      <view class="user-collect-item"></view>
     </view>
     
   </view>

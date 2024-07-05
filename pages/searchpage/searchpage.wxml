@@ -1,0 +1,23 @@
+<!--pages/searchpage/searchpage.wxml-->
+<view>
+  <view class="search-view">
+    没有找到相关内容
+  </view>
+  <view class="recommend-view">
+    <view>
+     为您推荐以下内容 
+    </view>
+    <view>
+      <view >
+      <view  class="view" style="display: flex; flex-wrap: wrap;" >
+        <view class="view-image" wx:for="{{imageurl}}" wx:key="index">
+        <navigator url="/pages/cloudview/cloudview?goodsId={{index}}">
+        <image src="{{imageurl[index].url}}">
+        </image>
+        </navigator>
+        </view>
+      </view>
+    </view>
+    </view>
+  </view>
+</view>

@@ -1,39 +1,29 @@
-// pages/information/information.js
+// pages/classvideo/classvideo.js
 Page({
 
-  /**
+   /**
    * 页面的初始数据
    */
   data: {
-    keyword: '',
+    video:[
+      { 
+        url:'http://sdw43wqdt.hb-bkt.clouddn.com/%E5%BD%9D%E7%BB%A3%E8%A7%86%E9%A2%91.mp4'
+      },
+      {
+        url:'http://sdw43wqdt.hb-bkt.clouddn.com/%E5%BD%9D%E7%BB%A3%E8%A7%86%E9%A2%91.mp4'
+      }
+    ],
+    index:''
   },
 
-  onSearch: function() {
-    const keyword = this.data.keyword.trim()
-    if (keyword === '') {
-      wx.showToast({
-        title: '请输入关键词',
-        icon: 'none'
-      })
-      return
-    }
-    wx.navigateTo({
-      url: '/pages/searchpage/searchpage'
-    })
-    // TODO: 发起搜索请求
-    console.log('搜索关键词：', keyword)
-  },
-  onInput: function(e) {
-    this.setData({
-      keyword: e.detail.value
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    const keyword = options.keyword
-    console.log('搜索关键词：', keyword)
+    const category = options.category; // 获取传递的参数值
+    this.setData({
+      index:category
+    })
   },
 
   /**

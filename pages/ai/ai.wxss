@@ -1,0 +1,83 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* 使容器高度为视口高度 */
+}
+
+.video-container {
+  width: 50%; /* 设置容器宽度，以 rpx 为单位 */
+  height: 50vw; /* 设置容器高度，与宽度相同 */
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  overflow: hidden; /* 隐藏溢出部分 */
+  margin-left: 25%;
+}
+
+
+image {
+  width: 400rpx;
+}
+
+.video {
+  width: 400rpx; /* 确保视频宽度铺满容器 */
+  /* height: auto; 自动调整高度 */
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto; /* 允许滚动 */
+}
+
+.message {
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  text-align: right; /* 可根据需要调整对齐方式 */
+}
+
+
+
+
+.message[data-role="user"] {
+  background-color: #DCF8C6; /* 用户消息背景色 */
+  align-self: flex-end; /* 用户消息靠右对齐 */
+  text-align: right; /* 用户消息文字靠右对齐 */
+}
+
+.message[data-role="ai"] {
+  background-color: rgb(233, 233, 233); /* AI消息背景色 */
+  align-self: flex-start; /* AI消息靠左对齐 */
+  text-align: left; /* AI消息文字左对齐 */
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%; /* 使输入框宽度为视口宽度 */
+  box-sizing: border-box; /* 包含 padding 和 border */
+}
+
+.chat-input input {
+  flex: 5;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  text-align: left; /* 输入框文字靠左对齐 */
+}
+
+.chat-input button {
+  flex: 1;
+  padding: 10px 20px;
+  background-color: #007aff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}

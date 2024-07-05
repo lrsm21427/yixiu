@@ -27,6 +27,20 @@
   background-color: #f7f4f4;
 }
 
+.circle-button {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #f8f8f8;
+  border: #e9e7e7 solid 1rpx;
+  margin-top: 60rpx;
+  margin-left: 10rpx;
+}
+
+.selected {
+  background-color: red;
+}
+
 .shopping-item {
   margin-bottom: 20rpx;
   background-color: white;
@@ -36,6 +50,12 @@
   width: 700rpx;
   border-radius:20rpx;
   border: 0.5rpx solid #e9e7e7;
+
+  /* background-color: #f8f8f8; */
+  /* height: 132rpx; */
+  /* border-radius: 28rpx 28rpx 0 0; */
+  /* display: flex; */
+  /* justify-content: space-between; */
 }
 
 .shopping-stores {
@@ -91,10 +111,26 @@
   margin-left: 20rpx;
 }
 
-
 .object-introduction  {
+  font-size: 20rpx;
   display: flex;
   color: darkgray;
+}
+
+.object-id {
+  margin-left: 20rpx;
+  width: 50rpx;
+  height: 50rpx;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.object-btn{
+  /* width: 10rpx; */
+  /* height: 50rpx; */
+  /* border: #fd7564 solid 1rpx; */background-color: #ffffff;
+  margin-left: 20rpx;
 }
 
 .object-selcet {
@@ -160,12 +196,23 @@
   justify-content: space-between;
 }
 .fixed-img{
-  position: absolute;
+position: absolute;
 left: 42rpx;
 top: 50rpx;
 width: 40rpx;
 height: 40rpx;
 }
+
+.fixed-img.selected {
+  /* 选中时的样式 */
+  background-color: #ff0000;
+  
+  color: #ffffff;
+  /* 其他样式属性 */
+  border-radius: 28rpx 28rpx 28rpx 28rpx;
+  display: flex;
+}
+
 
 .fixed-text {
   display: flex;

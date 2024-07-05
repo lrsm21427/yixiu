@@ -2,39 +2,46 @@
 <scroll-view scroll-y="true" class="scroll">
   <view class="shopping">
   <view class="shopping-select">
-    <view class="shopping-select-item" bindtap="Selectall" style="color: {{allcolor}};">全部</view>
+    <view class="shopping-select-item" bindtap="Selectallobject" style="color: {{allcolor}};">全部</view>
     <view class="shopping-select-item" bindtap="Selectcutprice" style="color: {{cutcolor}};">降价</view>
-    <view class="shopping-select-item">筛选</view>
+    <!-- <view class="shopping-select-item">筛选</view> -->
   </view>
   <view class="shopping-items">
     <view wx:if="{{all == true}}" >
       <view class="shopping-item" wx:for="{{stores}}" wx:key="id" >
         <view class="shopping-stores">
-          <view class="shopping-store-select" bindtap="Selectobject">
-          </view>
+          <!-- <view class="shopping-store-select" bindtap="Selectobject">
+          </view> -->
           <view class="shopping-store">
             {{item.name}}
           </view>
         </view>
         <view class="shopping-object">
-          <view class="shopping-object-select" bindtap="Selectobject"></view>
-          <image src="/icon/tab_shopping.png"></image>
+          <view class="circle-button {{item.isSelect ? 'selected' : ''}}" bindtap="toggleSelection" data-index="{{index}}"></view>
+
+          <image src="{{item.image}}"></image>
           <view class="object-infomation">
-            <view class="object-name">name</view>
-            <view class="object-introduction">introduction</view>
+            <view class="object-name">{{item.good}}</view>
+            <view class="object-introduction">{{item.introduction}}</view>
             <view class="object-selcet">
-              <view class="object-price">￥0.00</view>
-              <view class="object-num">
-                <view class="object-reduce" bindtap="Reduce">-</view>
-                <view class="object-number">{{item.num}}</view>
-                <view class="object-add" bindtap="Add">+</view>
-              </view>
+              <view class="object-price">￥{{item.price}}.00</view>
+              <view class="item-quantity">
+            <view class="object-id">
+              <button class="object-btn" bindtap="decreaseQuantity" data-index="{{index}}">
+                <view>
+                  -
+                </view>
+              </button>
+              <text class="quantity-text">{{item.quantity}}</text>
+              <button class="object-btn" bindtap="increaseQuantity" data-index="{{index}}">+</button>
+            </view>
+          </view>
             </view>
           </view>
         </view>
       </view>
     </view>
-    <view wx:if="{{cutprice == true}}">
+    <!-- <view wx:if="{{cutprice == true}}">
       <view class="shopping-item" wx:for="{{stores}}" wx:key="id" >
         <view class="shopping-stores">
           <view class="shopping-store-select" bindtap="Selectobject">
@@ -59,25 +66,25 @@
             </view>
           </view>
         </view>
-      </view>
-    </view>
+      </view> 
+    </view> -->
   </view>
 </view>
 
 </scroll-view>
 <view class="fixed" style="position:fixed;bottom:0;width:750rpx;">
   <checkbox-group bindchange="selectAll">
-          <label class='fixed-img'>
+          <label class="fixed-img {{isSelected ? 'selected' : ''}}">
             <checkbox value="{{!selectAllStatus}}" checked="{{selectAllStatus}}" hidden='hidden' />
-            <icon type="circle" size="23" wx:if="{{!selectAllStatus}}"></icon>
+            <icon style="margin-left: -4rpx;margin-top: -5rpx;" type="circle" size="23" wx:if="{{!selectAllStatus}}"></icon>
             <icon type="success" size="23" wx:if="{{selectAllStatus}}"></icon>
           </label>
-        </checkbox-group>
+  </checkbox-group>
   <view class="fixed-text">
     <text class="fixed-text1">总计</text>
     <view>
-      <text class="text">￥0.00</text>
-      <text class="fixed-text2">{{money}}</text>
+      <text class="text">￥{{totalPrice}}.00</text>
+      <!-- <text class="fixed-text2">{{money}}</text> -->
     </view>
   </view>
   <view class="fixed-cart" bindtap="orderTap">

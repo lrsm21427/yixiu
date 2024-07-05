@@ -1,0 +1,4 @@
+<!--pages/classvideo/classvideo.wxml-->
+<!-- 在.wxml文件中 -->
+<video src="{{video[index].url}}"  style="width: 100%;" controls autoplay ></video>
+

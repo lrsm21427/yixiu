@@ -5,7 +5,29 @@ App({
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch: function () {
-    
+    wx.cloud.init({
+      env:"lrsm-9gaypsda289b7bdd"
+    })
+
+    //get openid
+    var that = this;
+    wx.cloud.callFunction({
+      name:'login_get_openid',
+      success(res){
+        console.log(res);
+        that.globaDate.openid = res.result.openid
+
+        wx.cloud.database().collection('yi_log_users').where({
+          _openid:res.result.openid
+        }).get({
+          success(result){
+            console.log(result);
+            that.globaDate.userInfo = result.data[0]
+          }
+        })
+      }
+    })
+
   },
 
   /**
@@ -27,6 +49,10 @@ App({
    */
   onError: function (msg) {
     
+  },
+  globaDate:{
+    userInfo:null,
+    openid:null
   }
 })
 

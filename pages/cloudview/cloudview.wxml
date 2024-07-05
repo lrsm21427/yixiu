@@ -1,0 +1,3 @@
+<!--pages/cloudview/cloudview.wxml-->
+<image mode="aspectFill" src="{{imageurl[cloudID].url}}" ></image>
+<text class="indented-text" user-select="">{{imageurl[cloudID].information}}</text>

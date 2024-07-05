@@ -1,0 +1,5 @@
+<!--pages/classview/classview.wxml-->
+<view>
+  <view style="text-align: center;font-size: 40rpx;">{{showTitle}}</view>
+  <rich-text nodes="{{showContent}}"></rich-text>
+</view>
